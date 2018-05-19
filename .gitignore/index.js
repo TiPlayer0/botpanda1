@@ -5,7 +5,7 @@ con = console.log,
 git = require('git-rev');
 
 git.short(commit => git.branch(branch => {
-  console.log(`Emilia#${branch}@${commit}`);
+  console.log(`Panda_Bot#${branch}@${commit}`);
 }));
 const CURRENT_REV = "0.1.6";
 try {
@@ -31,8 +31,7 @@ try {
             "client_id": "",
             "prefix": "!",
             "owner_id": "193090359700619264",
-            "status": "Musicccc",
-            "youtube_api_key": process.env.YOUTUBE_API_KEY,
+            "status": "Music",
             "admins": ["193090359700619264"],
             "language" : "en"
         }
@@ -114,7 +113,7 @@ function play(msg, queue, song) {
                     author: {
                         name: client.user.username,
                         icon_url: client.user.avatarURL,
-                        url: "https://emilia-bot.xyz"
+                        url: "https://Panda_Bot-bot.xyz"
                     },
                     color: 0x00FF00,
                     title: `Queued`,
@@ -134,7 +133,7 @@ function play(msg, queue, song) {
             author: {
                 name: client.user.username,
                 icon_url: client.user.avatarURL,
-                url: "https://emilia-bot.xyz"
+                url: "https://Panda_Bot-bot.xyz"
             },
             color: 0x00FF00,
             title: `Lecture en cours`,
@@ -162,7 +161,7 @@ function play(msg, queue, song) {
             author: {
                 name: client.user.username,
                 icon_url: client.user.avatarURL,
-                url: "https://emilia-bot.xyz"
+                url: "https://Panda_Bot-bot.xyz"
             },
             color: 0x00FF00,
             title: `Now Playing`,
@@ -270,6 +269,7 @@ LET'S GO!
 var errsize = Number(fs.statSync("./data/errors.json")["size"])
     if (language == "fr") {
         con("La taille actuelle du journal des erreurs est de
+
  " + errsize + " Octets") 
     }else{
         con("Current error log size is " + errsize + " Bytes") }
@@ -400,11 +400,11 @@ client.on("message", function(msg) {
         if (msga.startsWith(prefix +`infomusic`)) {
             if(language == "fr"){
             git.short(commit => git.branch(branch => {
-              msg.channel.sendMessage(`Version: \`Emilia#${branch}@${commit}\` (cf: ${config.configRev} cr: ${CURRENT_REV}). Vous trouverez des informations sur le bot de musique Emilia à l'adresse https://github.com/Jorisvideo/emilia-musicbot.`);
+              msg.channel.sendMessage(`Version: \`Panda_Bot#${branch}@${commit}\` (cf: ${config.configRev} cr: ${CURRENT_REV}). Vous trouverez des informations sur le bot de musique Panda_Bot à l'adresse https://github.com/Jorisvideo/Panda_Bot-musicbot.`);
             }));  
             }else{
             git.short(commit => git.branch(branch => {
-              msg.channel.sendMessage(`Version: \`Emilia#${branch}@${commit}\` (cf: ${config.configRev} cr: ${CURRENT_REV}). Info about Emilia music bot can be found at https://github.com/Jorisvideo/emilia-musicbot.`);
+              msg.channel.sendMessage(`Version: \`Panda_Bot#${branch}@${commit}\` (cf: ${config.configRev} cr: ${CURRENT_REV}). Info about Panda_Bot music bot can be found at https://github.com/Jorisvideo/Panda_Bot-musicbot.`);
             }));
             }
         }
@@ -458,6 +458,7 @@ client.on("message", function(msg) {
                     if (!player || player.paused) return msg.channel.sendMessage("Bot ne joue pas!").then(response => { response.delete(5000) });
                     player.pause();
                     msg.channel.sendMessage("Musique en pause...").then(response => { response.delete(5000)
+
  });
                 }else{
                     if (!msg.member.voiceChannel) return msg.channel.sendMessage('You need to be in a voice channel').then(response => { response.delete(5000) });
@@ -550,7 +551,7 @@ client.on("message", function(msg) {
                     author: {
                         name: client.user.username,
                         icon_url: client.user.avatarURL,
-                        url: "https://emilia-bot.xyz"
+                        url: "https://Panda_Bot-bot.xyz"
                     },
                     color: 0x00FF00,
                     title: `Lecture actuelle`,
@@ -564,7 +565,7 @@ client.on("message", function(msg) {
                     author: {
                         name: client.user.username,
                         icon_url: client.user.avatarURL,
-                        url: "https://emilia-bot.xyz"
+                        url: "https://Panda_Bot-bot.xyz"
                     },
                     color: 0x00FF00,
                     title: `Currently playing`,
@@ -587,7 +588,7 @@ client.on("message", function(msg) {
                     author: {
                         name: client.user.username,
                         icon_url: client.user.avatarURL,
-                        url: "https://emilia-bot.xyz"
+                        url: "https://Panda_Bot-bot.xyz"
                     },
                     color: 0x00FF00,
                     title: `Queue`,
@@ -605,7 +606,7 @@ client.on("message", function(msg) {
                     author: {
                         name: client.user.username,
                         icon_url: client.user.avatarURL,
-                        url: "https://emilia-bot.xyz"
+                        url: "https://Panda_Bot-bot.xyz"
                     },
                     color: 0x00FF00,
                     title: `Queue`,
@@ -641,7 +642,8 @@ client.on("message", function(msg) {
     } if (language == "fr") {
         if (msga === '!aide') {
             msg.channel.sendMessage("Bonjour! Je m'appelle Panda_Bot!\nVoici ma liste
- de commandes:\n`!aide`: Pour savoir ma liste de commandes.\n`!aide \nEnjoy!");
+ de
+ commandes:\n`!aide`: Pour savoir ma liste de commandes.\n`!aide \nEnjoy!");
             }
         }
    
