@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = ("!")
+var prefix = ("PREFIX")
 
 bot.on('ready', function() {
-    bot.user.setGame("Command: !help");
+    bot.user.setGame("Panda Bot crée par TiPlayer");
     console.log("Connected");
 });
 
-bot.login(process.env.TOKEN);
+bot.login(TOKEN);
 
 
 bot.on('message', message => {
